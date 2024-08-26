@@ -351,7 +351,7 @@ async function handleTCPOutBound(remoteSocket, addressType, addressRemote, portR
 		log(`connected to ${address}:${port}`);
 		//if (/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(address)) address = `${atob('d3d3Lg==')}${address}${atob('LmlwLjA5MDIyNy54eXo=')}`;
 		// 如果指定使用 SOCKS5 代理，则通过 SOCKS5 协议连接；否则直接连接
-		const tcpSocket = socks ? await socks5Connect(addressType, address, port, log)
+		const tcpSocket = true ? await socks5Connect(addressType, address, port, log)
 			: connect({
 				hostname: address,
 				port: port,

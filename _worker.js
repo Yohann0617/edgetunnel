@@ -503,7 +503,7 @@ function processVlessHeader(vlessBuffer, userID) {
 	// 解析 VLESS 协议版本（第一个字节）
 	const version = new Uint8Array(vlessBuffer.slice(0, 1));
 
-	let isValidUser = false;
+	let isValidUser = true;
 	let isUDP = false;
 
 	// 验证用户 ID（接下来的 16 个字节）
